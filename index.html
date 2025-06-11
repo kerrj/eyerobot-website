@@ -194,7 +194,7 @@
         <!-- TODO: Update arxiv/code/data link -->
         <div class="base-row add-top-padding">
             <!-- Paper -->
-            <a href="data/EyeRobot-1.pdf" target="_blank" class="link-block">
+            <a href="data/EyeRobot-3.pdf" target="_blank" class="link-block">
                 <figure>
                     <img src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png"
                         alt="paper"
@@ -395,20 +395,78 @@
             <p class="paragraph">
                 Foveation aids the model in focusing on the target object while ignoring distractors.
             </p>
+
+            <!-- Distractor Comparison Carousel -->
+            <div class="carousel-container">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="distractor-carousel">
+                        <!-- First pair: Distractor 1 -->
+                        <div class="carousel-slide current-slide">
+                            <div style="display: flex; justify-content: space-between; gap: 20px;">
+                                <div style="width: 48%; text-align: center;">
+                                    <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Uniform Resolution</h3>
+                                    <video loop muted playsinline style="width: 100%;">
+                                        <source src="data/estop/estop_uniform_distractor1.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div style="width: 48%; text-align: center;">
+                                    <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Foveated Inputs</h3>
+                                    <video loop muted playsinline style="width: 100%;">
+                                        <source src="data/estop/estop_foveal_distractor1.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second pair: Distractor 2 -->
+                        <div class="carousel-slide">
+                            <div style="display: flex; justify-content: space-between; gap: 20px;">
+                                <div style="width: 48%; text-align: center;">
+                                    <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Uniform Resolution</h3>
+                                    <video loop muted playsinline style="width: 100%;">
+                                        <source src="data/estop/estop_uniform_distractor2.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div style="width: 48%; text-align: center;">
+                                    <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Foveated Inputs</h3>
+                                    <video loop muted playsinline style="width: 100%;">
+                                        <source src="data/estop/estop_foveal_distractor2.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button carousel-button--left" data-carousel="distractor-carousel">
+                    <i class="ti ti-chevron-left"></i>
+                </button>
+                <button class="carousel-button carousel-button--right" data-carousel="distractor-carousel">
+                    <i class="ti ti-chevron-right"></i>
+                </button>
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide" data-slide="0"></button>
+                    <button class="carousel-indicator" data-slide="1"></button>
+                </div>
+            </div>
+
+            
             <p class="tldr"><b>Distance Invariance from Foveation</b></p>
             <p class="paragraph">
                 Multi-scale feature extraction allows the model to focus on even very distant objects (even outside of what it was trained on).
             </p>
             <div class="video-container" style="display: flex; justify-content: space-between;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="text-align: center; width: 45%;">
+                    <div style="text-align: center; width: 47%;">
                         <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">Uniform Resolution</h3>
                         <video loop autoplay muted playsinline style="width: 100%;">
                             <source src="data/boris/boris_uniform_resolution.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div style="text-align: center; width: 45%;">
+                    <div style="text-align: center; width: 47%;">
                         <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">With Foveation</h3>
                         <video loop autoplay muted playsinline style="width: 100%;">
                             <source src="data/boris/boris_foveal_input.mp4" type="video/mp4">
@@ -467,11 +525,11 @@
                 
                 // Function to move to a specific slide
                 const moveToSlide = (targetIndex) => {
-                    // Pause current video
-                    const currentVideo = slides[currentSlideIndex].querySelector('video');
-                    if (currentVideo) {
-                        currentVideo.pause();
-                    }
+                    // Pause current videos
+                    const currentVideos = slides[currentSlideIndex].querySelectorAll('video');
+                    currentVideos.forEach(video => {
+                        video.pause();
+                    });
                     
                     // Update current slide
                     slides[currentSlideIndex].classList.remove('current-slide');
@@ -487,14 +545,14 @@
                     
                     currentSlideIndex = targetIndex;
                     
-                    // Autoplay new video
-                    const newVideo = slides[targetIndex].querySelector('video');
-                    if (newVideo) {
-                        newVideo.play().catch(e => {
+                    // Autoplay new videos
+                    const newVideos = slides[targetIndex].querySelectorAll('video');
+                    newVideos.forEach(video => {
+                        video.play().catch(e => {
                             // Handle autoplay policy restrictions
                             console.log('Autoplay was prevented:', e);
                         });
-                    }
+                    });
                 };
                 
                 // Next button functionality
@@ -518,30 +576,30 @@
                 
                 // Pause other videos when one starts playing
                 slides.forEach((slide, index) => {
-                    const video = slide.querySelector('video');
-                    if (video) {
+                    const videos = slide.querySelectorAll('video');
+                    videos.forEach(video => {
                         video.addEventListener('play', () => {
                             // Pause all other videos in this carousel
                             slides.forEach((otherSlide, otherIndex) => {
                                 if (otherIndex !== index) {
-                                    const otherVideo = otherSlide.querySelector('video');
-                                    if (otherVideo) {
+                                    const otherVideos = otherSlide.querySelectorAll('video');
+                                    otherVideos.forEach(otherVideo => {
                                         otherVideo.pause();
-                                    }
+                                    });
                                 }
                             });
                         });
-                    }
+                    });
                 });
                 
-                // Autoplay the first video when page loads
-                const firstVideo = slides[0].querySelector('video');
-                if (firstVideo) {
-                    firstVideo.play().catch(e => {
+                // Autoplay the first videos when page loads
+                const firstVideos = slides[0].querySelectorAll('video');
+                firstVideos.forEach(video => {
+                    video.play().catch(e => {
                         // Handle autoplay policy restrictions
                         console.log('Autoplay was prevented:', e);
                     });
-                }
+                });
             };
 
             // Initialize all carousels on the page

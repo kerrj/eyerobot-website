@@ -341,12 +341,210 @@
                 </div>
             </div>
         </div>
+        <div class="section base-row add-top-padding">
+            <h1>Emergent Eye Behavior</h1>
+        </div>
+        <div class="section base-row add-top-padding" style="flex-direction: column; align-items: center;">
+            <h2>Foveation Ablation</h2>
+            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px;">
+                        <source src="data/estop/estop_uniform_resolution.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px;">
+                        <source src="data/estop/estop_foveation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px;">
+                        <source src="data/boris/boris_uniform_resolution.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px;">
+                        <source src="data/boris/boris_foveal_input.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <p class="paragraph" style="text-align: center; margin-top: 15px;">Foveation enables object-centering fixation.</p>
+            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px;">
+                        <source src="data/estop/estop_uniform_distractor1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px;">
+                        <source src="data/estop/estop_foveal_distractor1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <p class="paragraph" style="text-align: center; margin-top: 15px;">Foveation mitigates effect of distractor.</p>
+            <h2>Gaze Switching</h2>
+            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px; height: 225px; object-fit: cover;">
+                        <source src="data/foveal_eye_view_website_videos/gaze_switching_eye_view_comp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px; height: 225px; object-fit: cover;">
+                        <source src="data/gaze_switching/gaze_switching_freedrive.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <p class="paragraph" style="text-align: center; margin-top: 15px;">The eye learns to shift its gaze from towel to bucket during grasping depending on the state of the arm.</p>
+            <h2>Wrist and Exo Baselines</h2>
+            <div class="carousel-container">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="baselines-carousel">
+                        <div class="carousel-slide current-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <source src="data/baselines/exo_only.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <source src="data/baselines/wrist_only_good.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <source src="data/baselines/wrist_only_bad.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <source src="data/eraser/eraser_single_perturbation.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button carousel-button--left" data-carousel="baselines-carousel">
+                    <i class="ti ti-chevron-left"></i>
+                </button>
+                <button class="carousel-button carousel-button--right" data-carousel="baselines-carousel">
+                    <i class="ti ti-chevron-right"></i>
+                </button>
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide" data-slide="0"></button>
+                    <button class="carousel-indicator" data-slide="1"></button>
+                    <button class="carousel-indicator" data-slide="2"></button>
+                    <button class="carousel-indicator" data-slide="3"></button>
+                </div>
+            </div>
+        </div>
 
          </div>
          <div class="section base-row add-top-padding">
             <h1>How it works</h1>
             <div class="separator"></div>
-            <p class="tldr"><b>BC-RL Loop</b></p>
+            <p class="tldr"><b>Eyeball Hardware</b></p>
+            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px; height: 448px; object-fit: cover;">
+                        <source src="data/physical_eyeball/eyeball_sacaade_sdr.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px; height: 448px; object-fit: cover;">
+                        <source src="data/physical_eyeball/eyeball_smooth_pursuit_sdr.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <p class="paragraph">
+                TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTod
+                oTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo
+            </p>
+            <div class="separator"></div>
+            <p class="tldr"><b>Active Visual Pretraining</b></p>
+            <div class="carousel-container">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="avp-carousel">
+                        <div class="carousel-slide current-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px; height: 338px; object-fit: contain;">
+                                <source src="data/active_visual_pretraining/new_scene_random.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px; height: 338px; object-fit: contain;">
+                                <source src="data/active_visual_pretraining/new_scene_eyeview.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px; height: 338px; object-fit: contain;">
+                                <source src="data/active_visual_pretraining/search_towel.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px; height: 338px; object-fit: contain;">
+                                <source src="data/active_visual_pretraining/search_bucket.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px; height: 338px; object-fit: contain;">
+                                <source src="data/active_visual_pretraining/avp_towel_success.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button carousel-button--left" data-carousel="avp-carousel">
+                    <i class="ti ti-chevron-left"></i>
+                </button>
+                <button class="carousel-button carousel-button--right" data-carousel="avp-carousel">
+                    <i class="ti ti-chevron-right"></i>
+                </button>
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide" data-slide="0"></button>
+                    <button class="carousel-indicator" data-slide="1"></button>
+                    <button class="carousel-indicator" data-slide="2"></button>
+                    <button class="carousel-indicator" data-slide="3"></button>
+                    <button class="carousel-indicator" data-slide="4"></button>
+                </div>
+            </div>
+            <p class="paragraph">
+                TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTod
+                oTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo
+            </p>
+            <div class="separator"></div>
+            <p class="tldr"><b>BC-RL Co-Training Loop</b></p>
+            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px;">
+                        <source src="data/bcrl_training/before_training.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px;">
+                        <source src="data/bcrl_training/after_training.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
             <p class="paragraph">
                 TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTod
                 oTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo
@@ -357,8 +555,72 @@
     
         <div class="section base-row add-top-padding">
             <h1>Limitations and Failures</h1>
-            <p class="paragraph">
-                Todo
+            <div class="carousel-container">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="limitations-carousel">
+                        <div class="carousel-slide current-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <source src="data/towel_and_bucket/towel_blind_grasp.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <source src="data/towel_and_bucket/towel_grasp_failure.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <source src="data/eraser/eraser_place_failure.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <source src="data/brush/brush_grasp_failure.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <source src="data/active_visual_pretraining/avp_towel_failure.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button carousel-button--left" data-carousel="limitations-carousel">
+                    <i class="ti ti-chevron-left"></i>
+                </button>
+                <button class="carousel-button carousel-button--right" data-carousel="limitations-carousel">
+                    <i class="ti ti-chevron-right"></i>
+                </button>
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide" data-slide="0"></button>
+                    <button class="carousel-indicator" data-slide="1"></button>
+                    <button class="carousel-indicator" data-slide="2"></button>
+                    <button class="carousel-indicator" data-slide="3"></button>
+                    <button class="carousel-indicator" data-slide="4"></button>
+                </div>
+            </div>
+        </div>
+            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px; height: 448px; object-fit: cover;">
+                        <source src="data/boris/boris_peakaboo_crashout.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <video loop autoplay muted controls playsinline style="width: 100%; max-width: 400px; height: 448px; object-fit: cover;">
+                        <source src="data/boris/boris_peakaboo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <p class="paragraph" style="font-size: 1.2em; text-align: center; margin-top: 15px;">
+                Context, memory, todo
             </p>
         </div>
 

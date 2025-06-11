@@ -249,69 +249,98 @@
 
             <h1>Real-World Task Execution Results</h1>
             <p class="paragraph">
-                TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo
+                We evaluate EyeRobot on 5 tasks involving manipulation over a 210° workspace to probe the limits of hand-eye coordination over a large region.
             </p>
-            
-        </div>
 
-        <!-- Video Carousel for Real-World Task Results -->
-        <div class="section base-row add-top-padding">
+            <!-- Video Carousel for Real-World Task Results -->
+            <div class="section base-row add-top-padding">
+                <div class="carousel-container">
+                    <div class="carousel-track-container">
+                        <div class="carousel-track" id="task-carousel">
+                            <div class="carousel-slide current-slide">
+                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                    <source src="data/estop/estop_continuous_servoing.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="carousel-slide">
+                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                    <source src="data/eraser/eraser_marker_stand_comp.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="carousel-slide">
+                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                    <source src="data/towel_and_bucket/towel_bucket_comp.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="carousel-slide">
+                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                    <source src="data/screwdriver_reorient/screwdriver_wood_supp.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="carousel-slide">
+                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                    <source src="data/brush/brush_handoff.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button carousel-button--left" data-carousel="task-carousel">
+                        <i class="ti ti-chevron-left"></i>
+                    </button>
+                    <button class="carousel-button carousel-button--right" data-carousel="task-carousel">
+                        <i class="ti ti-chevron-right"></i>
+                    </button>
+                    <div class="carousel-nav">
+                        <button class="carousel-indicator current-slide" data-slide="0"></button>
+                        <button class="carousel-indicator" data-slide="1"></button>
+                        <button class="carousel-indicator" data-slide="2"></button>
+                        <button class="carousel-indicator" data-slide="3"></button>
+                        <button class="carousel-indicator" data-slide="4"></button>
+                    </div>
+                </div>
+            </div>
+            <h1>Eyeball Perspective</h1>
             <div class="carousel-container">
                 <div class="carousel-track-container">
-                    <div class="carousel-track" id="task-carousel">
+                    <div class="carousel-track" id="eyeball-carousel">
                         <div class="carousel-slide current-slide">
                             <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/brush/brush_handoff.mp4" type="video/mp4">
+                                <source src="data/foveal_eye_view_website_videos/estop_eye_view_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <p class="video-caption">Brush Handoff</p>
                         </div>
                         <div class="carousel-slide">
                             <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/eraser/eraser_perturbation.mp4" type="video/mp4">
+                                <source src="data/foveal_eye_view_website_videos/eraser_eye_view_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <p class="video-caption">Eraser Perturbation</p>
                         </div>
                         <div class="carousel-slide">
                             <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/estop/estop_continuous_servoing.mp4" type="video/mp4">
+                                <source src="data/foveal_eye_view_website_videos/towel_eyeview_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <p class="video-caption">Emergency Stop Continuous Servoing</p>
-                        </div>
-                        <div class="carousel-slide">
-                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/towel_and_bucket/towel_tier4.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <p class="video-caption">Towel Tier 4</p>
-                        </div>
-                        <div class="carousel-slide">
-                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/screwdriver_reorient/screwdriver_wood_supp.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <p class="video-caption">Screwdriver Wood Support</p>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-button carousel-button--left" data-carousel="task-carousel">
+                <button class="carousel-button carousel-button--left" data-carousel="eyeball-carousel">
                     <i class="ti ti-chevron-left"></i>
                 </button>
-                <button class="carousel-button carousel-button--right" data-carousel="task-carousel">
+                <button class="carousel-button carousel-button--right" data-carousel="eyeball-carousel">
                     <i class="ti ti-chevron-right"></i>
                 </button>
                 <div class="carousel-nav">
                     <button class="carousel-indicator current-slide" data-slide="0"></button>
                     <button class="carousel-indicator" data-slide="1"></button>
                     <button class="carousel-indicator" data-slide="2"></button>
-                    <button class="carousel-indicator" data-slide="3"></button>
-                    <button class="carousel-indicator" data-slide="4"></button>
                 </div>
             </div>
         </div>
-
 
          </div>
          <div class="section base-row add-top-padding">
@@ -359,92 +388,99 @@
     <!-- Carousel JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const track = document.querySelector('#task-carousel');
-            const slides = Array.from(track.children);
-            const nextButton = document.querySelector('.carousel-button--right');
-            const prevButton = document.querySelector('.carousel-button--left');
-            const dotsNav = document.querySelector('.carousel-nav');
-            const dots = Array.from(dotsNav.children);
             
-            let currentSlideIndex = 0;
-            
-            // Function to move to a specific slide
-            const moveToSlide = (targetIndex) => {
-                // Pause current video
-                const currentVideo = slides[currentSlideIndex].querySelector('video');
-                if (currentVideo) {
-                    currentVideo.pause();
-                }
+            const initializeCarousel = (carouselContainer) => {
+                const track = carouselContainer.querySelector('.carousel-track');
+                const slides = Array.from(track.children);
+                const nextButton = carouselContainer.querySelector('.carousel-button--right');
+                const prevButton = carouselContainer.querySelector('.carousel-button--left');
+                const dotsNav = carouselContainer.querySelector('.carousel-nav');
+                const dots = Array.from(dotsNav.children);
                 
-                // Update current slide
-                slides[currentSlideIndex].classList.remove('current-slide');
-                slides[targetIndex].classList.add('current-slide');
+                let currentSlideIndex = 0;
                 
-                // Update dots
-                dots[currentSlideIndex].classList.remove('current-slide');
-                dots[targetIndex].classList.add('current-slide');
+                // Function to move to a specific slide
+                const moveToSlide = (targetIndex) => {
+                    // Pause current video
+                    const currentVideo = slides[currentSlideIndex].querySelector('video');
+                    if (currentVideo) {
+                        currentVideo.pause();
+                    }
+                    
+                    // Update current slide
+                    slides[currentSlideIndex].classList.remove('current-slide');
+                    slides[targetIndex].classList.add('current-slide');
+                    
+                    // Update dots
+                    dots[currentSlideIndex].classList.remove('current-slide');
+                    dots[targetIndex].classList.add('current-slide');
+                    
+                    // Move the track
+                    const slideWidth = slides[0].getBoundingClientRect().width;
+                    track.style.transform = `translateX(-${slideWidth * targetIndex}px)`;
+                    
+                    currentSlideIndex = targetIndex;
+                    
+                    // Autoplay new video
+                    const newVideo = slides[targetIndex].querySelector('video');
+                    if (newVideo) {
+                        newVideo.play().catch(e => {
+                            // Handle autoplay policy restrictions
+                            console.log('Autoplay was prevented:', e);
+                        });
+                    }
+                };
                 
-                // Move the track
-                const slideWidth = slides[0].getBoundingClientRect().width;
-                track.style.transform = `translateX(-${slideWidth * targetIndex}px)`;
+                // Next button functionality
+                nextButton.addEventListener('click', () => {
+                    const nextIndex = currentSlideIndex === slides.length - 1 ? 0 : currentSlideIndex + 1;
+                    moveToSlide(nextIndex);
+                });
                 
-                currentSlideIndex = targetIndex;
+                // Previous button functionality
+                prevButton.addEventListener('click', () => {
+                    const prevIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
+                    moveToSlide(prevIndex);
+                });
                 
-                // Autoplay new video
-                const newVideo = slides[targetIndex].querySelector('video');
-                if (newVideo) {
-                    newVideo.play().catch(e => {
+                // Dot navigation functionality
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        moveToSlide(index);
+                    });
+                });
+                
+                // Pause other videos when one starts playing
+                slides.forEach((slide, index) => {
+                    const video = slide.querySelector('video');
+                    if (video) {
+                        video.addEventListener('play', () => {
+                            // Pause all other videos in this carousel
+                            slides.forEach((otherSlide, otherIndex) => {
+                                if (otherIndex !== index) {
+                                    const otherVideo = otherSlide.querySelector('video');
+                                    if (otherVideo) {
+                                        otherVideo.pause();
+                                    }
+                                }
+                            });
+                        });
+                    }
+                });
+                
+                // Autoplay the first video when page loads
+                const firstVideo = slides[0].querySelector('video');
+                if (firstVideo) {
+                    firstVideo.play().catch(e => {
                         // Handle autoplay policy restrictions
                         console.log('Autoplay was prevented:', e);
                     });
                 }
             };
-            
-            // Next button functionality
-            nextButton.addEventListener('click', () => {
-                const nextIndex = currentSlideIndex === slides.length - 1 ? 0 : currentSlideIndex + 1;
-                moveToSlide(nextIndex);
-            });
-            
-            // Previous button functionality
-            prevButton.addEventListener('click', () => {
-                const prevIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
-                moveToSlide(prevIndex);
-            });
-            
-            // Dot navigation functionality
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    moveToSlide(index);
-                });
-            });
-            
-            // Pause other videos when one starts playing
-            slides.forEach((slide, index) => {
-                const video = slide.querySelector('video');
-                if (video) {
-                    video.addEventListener('play', () => {
-                        // Pause all other videos
-                        slides.forEach((otherSlide, otherIndex) => {
-                            if (otherIndex !== index) {
-                                const otherVideo = otherSlide.querySelector('video');
-                                if (otherVideo) {
-                                    otherVideo.pause();
-                                }
-                            }
-                        });
-                    });
-                }
-            });
-            
-            // Autoplay the first video when page loads
-            const firstVideo = slides[0].querySelector('video');
-            if (firstVideo) {
-                firstVideo.play().catch(e => {
-                    // Handle autoplay policy restrictions
-                    console.log('Autoplay was prevented:', e);
-                });
-            }
+
+            // Initialize all carousels on the page
+            const carousels = document.querySelectorAll('.carousel-container');
+            carousels.forEach(initializeCarousel);
         });
     </script>
 

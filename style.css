@@ -166,6 +166,8 @@ display: none;
     line-height: 24px;
     font-weight: 500;
     letter-spacing: 0;
+    display: block;
+    width: 100%;
 }
 
 .title-row {
@@ -320,7 +322,7 @@ display: none;
     margin-bottom: 0px;
 }
 .paragraph {
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 10px;
     font-family: 'Open Sans',sans-serif;
     color: #333;
@@ -329,6 +331,8 @@ display: none;
     font-weight: 400;
     letter-spacing: 0;
     text-align: left;
+    display: block;
+    width: 100%;
 }
 
 .paragraph-center {

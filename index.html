@@ -232,7 +232,7 @@
                 <b>TL;DR</b>:
                 train a robot eyeball 👁️ to look around with RL to enable a BC agent 🦾 to perform manipulation tasks.
             </h1>
-            <video id="main-video" autobuffer muted autoplay loop controls playsinline>
+            <video id="main-video" autobuffer muted autoplay loop playsinline>
                 <source id="mp4" src="data/eye_robot_towel_teaser.mp4" type="video/mp4">
             </video>
         </div>
@@ -259,31 +259,31 @@
                     <div class="carousel-track-container">
                         <div class="carousel-track" id="task-carousel">
                             <div class="carousel-slide current-slide">
-                                <video loop controls muted playsinline style="width: 100%;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/estop/estop_continuous_servoing.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop controls muted playsinline style="width: 100%;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/eraser/eraser_marker_stand_comp.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop controls muted playsinline style="width: 100%;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/towel_and_bucket/towel_bucket_comp.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop controls muted playsinline style="width: 100%;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/screwdriver_reorient/screwdriver_wood_supp.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop controls muted playsinline style="width: 100%;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/brush/brush_handoff.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -310,19 +310,19 @@
                 <div class="carousel-track-container">
                     <div class="carousel-track" id="eyeball-carousel">
                         <div class="carousel-slide current-slide">
-                            <video loop controls muted playsinline style="width: 100%;">
+                            <video loop muted playsinline style="width: 100%;">
                                 <source src="data/foveal_eye_view_website_videos/estop_eye_view_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop controls muted playsinline style="width: 100%;">
+                            <video loop muted playsinline style="width: 100%;">
                                 <source src="data/foveal_eye_view_website_videos/eraser_eye_view_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop controls muted playsinline style="width: 100%;">
+                            <video loop muted playsinline style="width: 100%;">
                                 <source src="data/foveal_eye_view_website_videos/towel_eyeview_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -351,7 +351,7 @@
             <p class="paragraph">
                 We capture robot demonstrations with a 360° camera and import this into an RL environment for simulating eye views. 
             </p>
-            <video loop controls autoplay muted playsinline style="width: 100%;">
+            <video loop autoplay muted playsinline style="width: 100%;">
                 <source src="data/teleop/real2simclip.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -387,11 +387,39 @@
             <h1>Foveated Transformer Architecture</h1>
             <div class="separator"></div>
             <p class="paragraph">
-                
+                We extract features in a multi-scale pyramid, enabling a small, high-resolution fovea along with a larger peripheral field of view. 
+                These features are positionally encoded with nested 2D RoPE embeddings to consistently overlay image tokens, while other query tokens in the model are positioned at the center of the image.
             </p>
-            
-        </div>
+            <img src="data/fort-website.jpg" style="max-width: 100%" alt="Foveated Transformer Architecture" />
+            <p class="tldr"><b>Robustness to Distractors</b></p>
+            <p class="paragraph">
+                Foveation aids the model in focusing on the target object while ignoring distractors.
+            </p>
+            <p class="tldr"><b>Distance Invariance from Foveation</b></p>
+            <p class="paragraph">
+                Multi-scale feature extraction allows the model to focus on even very distant objects (even outside of what it was trained on).
+            </p>
+            <div class="video-container" style="display: flex; justify-content: space-between;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="text-align: center; width: 45%;">
+                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">Uniform Resolution</h3>
+                        <video loop autoplay muted playsinline style="width: 100%;">
+                            <source src="data/boris/boris_uniform_resolution.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div style="text-align: center; width: 45%;">
+                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">With Foveation</h3>
+                        <video loop autoplay muted playsinline style="width: 100%;">
+                            <source src="data/boris/boris_foveal_input.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+        
     
         <div class="section base-row add-top-padding">
             <h1>Limitations and Failures</h1>

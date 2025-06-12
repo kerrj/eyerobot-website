@@ -247,7 +247,8 @@
         <div class="section base-row add-top-padding">
             <h1 class="tldr">
                 <b>TL;DR</b>:
-                train a robot eyeball 👁️ to look around with RL to enable a BC agent 🦾 to perform manipulation tasks.
+                <!-- train a mechanical eyeball to look around to enable manipulation tasks in a large workspace. -->
+                Robot policy learning with an active mechanical eyeball
             </h1>
             <video id="main-video" autobuffer muted autoplay loop playsinline>
                 <source id="mp4" src="data/eye_robot_towel_teaser.mp4" type="video/mp4">
@@ -256,7 +257,7 @@
 
         <div class="section base-row add-top-padding">
             <h1 class="tldr">
-                The mechanical eyeball is co-trained with a robot arm through a <b>BC-RL loop</b> which frames eye gaze as
+                We train eyeball and arm policies <em>jointly</em> through a <b>BC-RL loop</b> which frames eye gaze as
                 an RL agent that continuously optimizes the performance of a BC policy.
             </h1>
             <img src="data/eyerobot_framework.jpg" style="max-width: 100%" />
@@ -367,25 +368,6 @@
          </div>
          <div class="section base-row add-top-padding">
             <h1>How it works</h1>
-            <div class="separator"></div>
-            <p class="tldr"><b>Eyeball Hardware</b></p>
-            <p class="paragraph">We design a performant camera gimbal which consists of two direct drive motors, which can move very quickly, precisely, and smoothly.
-                We use a 90fps global shutter camera, enabling smooth vision despite fast motion.
-            </p>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; width: 80%; margin-top: 20px;">
-                <div style="text-align: center; width: 49%;">
-                    <video loop autoplay muted playsinline style="width: 100%; height: auto; object-fit: cover;" preload="none">
-                        <source data-src="data/physical_eyeball/eyeball_sacaade_sdr.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div style="text-align: center; width: 49%;">
-                    <video loop autoplay muted playsinline style="width: 100%; height: auto; object-fit: cover;" preload="none">
-                        <source data-src="data/physical_eyeball/eyeball_smooth_pursuit_sdr.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
             <!-- <div class="separator"></div>
              <p class="tldr"><b>Active Visual Pretraining</b></p>
             <div class="carousel-container">
@@ -515,6 +497,31 @@
         </div>
 
         <div class="section base-row add-top-padding">
+            <h1>Eyeball Hardware</h1>
+            <p class="paragraph">We design a performant camera gimbal which consists of two direct drive motors, which can move very quickly, precisely, and smoothly.
+                We use a 90fps global shutter camera, enabling smooth vision despite fast motion.
+            </p>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; width: 80%; margin-top: 20px;">
+                <div style="text-align: center; width: 49%;">
+                    <video loop autoplay muted playsinline style="width: 100%; height: auto; object-fit: cover;" preload="none">
+                        <source data-src="data/physical_eyeball/eyeball_sacaade_sdr.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="text-align: center; width: 49%;">
+                    <video loop autoplay muted playsinline style="width: 100%; height: auto; object-fit: cover;" preload="none">
+                        <source data-src="data/physical_eyeball/eyeball_smooth_pursuit_sdr.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="icon-separator">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+        </div>
+        <div class="section base-row add-top-padding">
             <h1>Foveated Transformer Architecture</h1>
             <p class="paragraph">
                 We extract features in a multi-scale pyramid, enabling a small, high-resolution fovea along with a larger peripheral field of view. 
@@ -614,7 +621,14 @@
         </div>
         <div class="section base-row add-top-padding">
             <h1>Wrist and Exo Baselines</h1>
+            <p class="paragraph">
+                Alone, wrist cameras and exo cameras fail due to either lack of visual search or lack of precision. 
+                With both combined, policies regain large-workspace performance, but interestingly still suffer in precision compared to wrist-only inputs, 
+                which we hypothesize is because of the large number of irrelevant image tokens increasing the risk of overfitting with low data.
+            </p>
         </div>
+        
+        
         <div class="section base-row add-top-padding" style="flex-direction: column; align-items: center;">
             <div class="carousel-container">
                 <div class="carousel-track-container">
@@ -719,7 +733,7 @@
             <h1 id="abstract">Citation </h1>
             <p class="paragraph"> If you use this work or find it helpful, please consider citing: (bibtex) </p>
             <pre id="codecell0" style="white-space: pre-wrap; word-wrap: break-word; max-width: 100%; overflow-x: auto; padding: 1em; background: #f5f5f5; border-radius: 4px;">@inproceedings{kerrj2025eyerobot,
-  title={Eye, Robot: Learning Hand-Eye Coordination with Reinforcement Learning},
+  title={Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop},
   author={Justin Kerr and Kush Hari and Ethan Weber and Chung Min Kim and Brent Yi and Tyler Bonnen and Ken Goldberg and Angjoo Kanazawa},
   booktitle={TODO},
   year={TODO},

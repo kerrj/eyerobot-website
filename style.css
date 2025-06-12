@@ -822,6 +822,17 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 750px) {
+    .title {
+        font-size: 48px;
+        line-height: 60px;
+        letter-spacing: 1.5px;
+    }
+
+    .subheader {
+        font-size: 26px;
+        line-height: 40px;
+    }
+
     .gpt-query {
         height: 30px;
         font-size: 2.5vw;
@@ -833,9 +844,16 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 550px) {
-    /* .subheader {
-        font-size: 16px;
-    } */
+    .title {
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: 1px;
+    }
+
+    .subheader {
+        font-size: 20px;
+        line-height: 30px;
+    }
 
     /* .author-text {
         font-size: 12px;

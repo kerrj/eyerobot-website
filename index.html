@@ -129,6 +129,22 @@
             font-weight: bold;
             text-align: center;
         }
+
+        /* Icon Separator Styles */
+        .icon-separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 2rem 0;
+        }
+        
+        .icon-separator img {
+            height: 24px;
+            width: auto;
+            opacity: 0.7;
+            object-fit: contain;
+        }
     </style>
     <link rel="icon" type="image/webp" href="data/favicon.webp" />
 </head>
@@ -249,7 +265,7 @@
         <div class="section base-row add-top-padding">
             
 
-            <h1>Real-World Task Execution</h1>
+            <h1>Gaze for Real-World Manipulation</h1>
             <p class="paragraph">
                 EyeRobot enables manipulation over a large, panoramic workspace with a single ego-mounted active camera.
             </p>
@@ -306,7 +322,7 @@
                     </div>
                 </div>
             </div>
-            <h1>Eyeball Perspective</h1>
+            <p class="tldr"><b>Eyeball Perspective</b></p>
             <div class="carousel-container">
                 <div class="carousel-track-container">
                     <div class="carousel-track" id="eyeball-carousel">
@@ -343,7 +359,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="icon-separator">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+        </div>
          </div>
          <div class="section base-row add-top-padding">
             <h1>How it works</h1>
@@ -488,10 +508,14 @@
                 }
             </style>
          </div>
+         <div class="icon-separator">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+        </div>
 
         <div class="section base-row add-top-padding">
             <h1>Foveated Transformer Architecture</h1>
-            <div class="separator"></div>
             <p class="paragraph">
                 We extract features in a multi-scale pyramid, enabling a small, high-resolution fovea along with a larger peripheral field of view. 
                 These features are positionally encoded with nested 2D RoPE embeddings to consistently overlay image tokens, while other query tokens in the model are positioned at the center of the image.
@@ -583,7 +607,11 @@
             </div>
 
         </div>
-        
+        <div class="icon-separator">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+        </div>
         <div class="section base-row add-top-padding">
             <h1>Wrist and Exo Baselines</h1>
         </div>
@@ -592,19 +620,19 @@
                 <div class="carousel-track-container">
                     <div class="carousel-track" id="baselines-carousel">
                         <div class="carousel-slide current-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
                                 <source data-src="data/baselines/exo_only.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
                                 <source data-src="data/baselines/wrist_only_good.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
                                 <source data-src="data/eraser/eraser_single_perturbation.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -624,38 +652,47 @@
                 </div>
             </div>
         </div>
-
+        <div class="icon-separator">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+            <img src="data/eye_icon.png" alt="separator icon">
+        </div>
         <div class="section base-row add-top-padding">
-            <h1>Limitations and Failures</h1>
+            <h1>Failures</h1>
+            <p class="paragraph">Failure cases are primarily due to poor depth perception of the model, owing to the low-angle position of the camera.
+                Secondly, long-range search can fail to locate an object 
+                In addition, we observe occasional <em>blind</em> grasps where the arm grasps the mean of the data when no object is in view (i.e grasping to the far left or right if the eye cannot see the towel).
+
+            </p>
             <div class="carousel-container">
                 <div class="carousel-track-container">
                     <div class="carousel-track" id="limitations-carousel">
                         <div class="carousel-slide current-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
                                 <source data-src="data/towel_and_bucket/towel_blind_grasp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
                                 <source data-src="data/towel_and_bucket/towel_grasp_failure.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
                                 <source data-src="data/eraser/eraser_place_failure.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
                                 <source data-src="data/brush/brush_grasp_failure.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
                                 <source data-src="data/active_visual_pretraining/avp_towel_failure.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -858,6 +895,13 @@
             }
         });
     </script>
+
+    <!-- Example usage of the icon separator -->
+    <div class="icon-separator">
+        <img src="data/favicon.webp" alt="separator icon">
+        <img src="data/favicon.webp" alt="separator icon">
+        <img src="data/favicon.webp" alt="separator icon">
+    </div>
 
 </body>
 

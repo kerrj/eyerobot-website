@@ -20,12 +20,12 @@
     <!-- Website Metadata -->
     <meta content="Robot policy learning with an active mechanical eyeball"
         name="description" />
-    <meta content="Eye, Robot: Learning Hand-Eye Coordination with Reinforcement Learning" property="og:title" />
-    <meta content="Eye, Robot: Learning Hand-Eye Coordination with Reinforcement Learning"
+    <meta content="Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop" property="og:title" />
+    <meta content="Robot policy learning with an active mechanical eyeball"
         property="og:description" />
     <meta content="http://www.eyerobot.net/data/eyerobot-previewcard.jpg" property="og:image" />
-    <meta content="Eye, Robot: Learning Hand-Eye Coordination with Reinforcement Learning" property="twitter:title" />
-    <meta content="Train an eyeball to look around for robot manipulation!"
+    <meta content="Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop" property="twitter:title" />
+    <meta content="Robot policy learning with an active mechanical eyeball"
         property="twitter:description" />
     <meta content="http://www.eyerobot.net/data/eyerobot-previewcard.jpg" property="twitter:image" /> 
     <meta property="og:type" content="website" />
@@ -139,7 +139,7 @@
             <h1 class="title">
                 <span style="text-wrap: nowrap">Eye, Robot</span>
             </h1>
-            <h1 class="subheader">Learning Hand-Eye Coordination with Reinforcement Learning</h1>
+            <h1 class="subheader">Learning to Look to Act with a BC-RL Perception-Action Loop</h1>
             <!-- Author list -->
             <div class="base-row">
                 <!-- Refer to how author wrapping is performed in https://brentyi.github.io/tilted/ -->
@@ -194,7 +194,7 @@
         <!-- TODO: Update arxiv/code/data link -->
         <div class="base-row add-top-padding">
             <!-- Paper -->
-            <a href="data/EyeRobot-1.pdf" target="_blank" class="link-block">
+            <a href="data/EyeRobot-3.pdf" target="_blank" class="link-block">
                 <figure>
                     <img src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png"
                         alt="paper"
@@ -230,16 +230,17 @@
         <div class="section base-row add-top-padding">
             <h1 class="tldr">
                 <b>TL;DR</b>:
-                TODO
+                train a robot eyeball 👁️ to look around with RL to enable a BC agent 🦾 to perform manipulation tasks.
             </h1>
-            <video id="main-video" autobuffer muted autoplay loop controls playsinline>
+            <video id="main-video" autobuffer muted autoplay loop playsinline>
                 <source id="mp4" src="data/eye_robot_towel_teaser.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="section base-row add-top-padding">
             <h1 class="tldr">
-                We develop a mechanical eyeball with 2 degrees of freedom and a fish-eye lens that can be co-trained with a robot arm through BC-RL loop.
+                The mechanical eyeball is co-trained with a robot arm through a <b>BC-RL loop</b> which frames eye gaze as
+                an RL agent that continuously optimizes the performance of a BC policy.
             </h1>
             <img src="data/eyerobot_framework.jpg" style="max-width: 100%" />
         </div>
@@ -247,9 +248,9 @@
         <div class="section base-row add-top-padding">
             
 
-            <h1>Real-World Task Execution Results</h1>
+            <h1>Real-World Task Execution</h1>
             <p class="paragraph">
-                We evaluate EyeRobot on 5 tasks involving manipulation over a 210° workspace to probe the limits of hand-eye coordination over a large region.
+                EyeRobot enables manipulation over a large, panoramic workspace with a single ego-mounted active camera.
             </p>
 
             <!-- Video Carousel for Real-World Task Results -->
@@ -258,31 +259,31 @@
                     <div class="carousel-track-container">
                         <div class="carousel-track" id="task-carousel">
                             <div class="carousel-slide current-slide">
-                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/estop/estop_continuous_servoing.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/eraser/eraser_marker_stand_comp.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/towel_and_bucket/towel_bucket_comp.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/screwdriver_reorient/screwdriver_wood_supp.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                                <video loop muted playsinline style="width: 100%;">
                                     <source src="data/brush/brush_handoff.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -309,19 +310,19 @@
                 <div class="carousel-track-container">
                     <div class="carousel-track" id="eyeball-carousel">
                         <div class="carousel-slide current-slide">
-                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                            <video loop muted playsinline style="width: 100%;">
                                 <source src="data/foveal_eye_view_website_videos/estop_eye_view_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                            <video loop muted playsinline style="width: 100%;">
                                 <source src="data/foveal_eye_view_website_videos/eraser_eye_view_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop controls muted playsinline style="width: 100%; max-width: 600px;">
+                            <video loop muted playsinline style="width: 100%;">
                                 <source src="data/foveal_eye_view_website_videos/towel_eyeview_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -545,13 +546,137 @@
                     </video>
                 </div>
             </div>
+            <p class="tldr"><b>Real2Sim EyeGym</b></p>
             <p class="paragraph">
-                TodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTod
-                oTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodoTodo
+                We capture robot demonstrations with a 360° camera and import this into an RL environment for simulating eye views. 
             </p>
-            <img src="data/4ddpm_fig.jpg" style="max-width: 100%; padding-bottom: 30px" />
+            <video loop autoplay muted playsinline style="width: 100%;">
+                <source src="data/teleop/real2simclip.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+         
+            <div class="separator"></div>
+            <p class="tldr"><b>BC-RL Cotraining</b></p>
+            <p class="paragraph">
+                During BC-RL co-training, eye actions are sampled to obtain observations for training a BC ACT policy.
+                The eyeball is rewarded when the robot arm predicts accurate actions, leading to gaze behavior that facilitates action.
+            </p>
+            <img src="data/bcrl-abstract.jpg" style="width: 70%; display: block; margin: 20px auto;" alt="BC-RL Cotraining Abstract" />
+            <div class="video-container" style="display: flex; justify-content: space-between;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="text-align: center; width: 45%;">
+                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">Before BC-RL: random gaze</h3>
+                        <video loop autoplay muted playsinline style="width: 100%;">
+                            <source src="data/bcrl_training/before_training.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div style="text-align: center; width: 45%;">
+                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">After Training: searches for relevant objects</h3>
+                        <video loop autoplay muted playsinline style="width: 100%;">
+                            <source src="data/bcrl_training/after_training.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
          </div>
 
+        <div class="section base-row add-top-padding">
+            <h1>Foveated Transformer Architecture</h1>
+            <div class="separator"></div>
+            <p class="paragraph">
+                We extract features in a multi-scale pyramid, enabling a small, high-resolution fovea along with a larger peripheral field of view. 
+                These features are positionally encoded with nested 2D RoPE embeddings to consistently overlay image tokens, while other query tokens in the model are positioned at the center of the image.
+            </p>
+            <img src="data/fort-website.jpg" style="max-width: 100%" alt="Foveated Transformer Architecture" />
+            <p class="tldr"><b>Robustness to Distractors</b></p>
+            <p class="paragraph">
+                Foveation aids the model in focusing on the target object while ignoring distractors.
+            </p>
+
+            <!-- Distractor Comparison Carousel -->
+            <div class="carousel-container">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="distractor-carousel">
+                        <!-- First pair: Distractor 1 -->
+                        <div class="carousel-slide current-slide">
+                            <div style="display: flex; justify-content: space-between; gap: 20px;">
+                                <div style="width: 48%; text-align: center;">
+                                    <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Uniform Resolution</h3>
+                                    <video loop muted playsinline style="width: 100%;">
+                                        <source src="data/estop/estop_uniform_distractor1.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div style="width: 48%; text-align: center;">
+                                    <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Foveated Inputs</h3>
+                                    <video loop muted playsinline style="width: 100%;">
+                                        <source src="data/estop/estop_foveal_distractor1.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second pair: Distractor 2 -->
+                        <div class="carousel-slide">
+                            <div style="display: flex; justify-content: space-between; gap: 20px;">
+                                <div style="width: 48%; text-align: center;">
+                                    <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Uniform Resolution</h3>
+                                    <video loop muted playsinline style="width: 100%;">
+                                        <source src="data/estop/estop_uniform_distractor2.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div style="width: 48%; text-align: center;">
+                                    <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Foveated Inputs</h3>
+                                    <video loop muted playsinline style="width: 100%;">
+                                        <source src="data/estop/estop_foveal_distractor2.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button carousel-button--left" data-carousel="distractor-carousel">
+                    <i class="ti ti-chevron-left"></i>
+                </button>
+                <button class="carousel-button carousel-button--right" data-carousel="distractor-carousel">
+                    <i class="ti ti-chevron-right"></i>
+                </button>
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide" data-slide="0"></button>
+                    <button class="carousel-indicator" data-slide="1"></button>
+                </div>
+            </div>
+
+            
+            <p class="tldr"><b>Distance Invariance from Foveation</b></p>
+            <p class="paragraph">
+                Multi-scale feature extraction allows the model to focus on even very distant objects (even outside of what it was trained on).
+            </p>
+            <div class="video-container" style="display: flex; justify-content: space-between;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="text-align: center; width: 47%;">
+                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">Uniform Resolution</h3>
+                        <video loop autoplay muted playsinline style="width: 100%;">
+                            <source src="data/boris/boris_uniform_resolution.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div style="text-align: center; width: 47%;">
+                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">With Foveation</h3>
+                        <video loop autoplay muted playsinline style="width: 100%;">
+                            <source src="data/boris/boris_foveal_input.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
     
         <div class="section base-row add-top-padding">
             <h1>Limitations and Failures</h1>
@@ -663,11 +788,11 @@
                 
                 // Function to move to a specific slide
                 const moveToSlide = (targetIndex) => {
-                    // Pause current video
-                    const currentVideo = slides[currentSlideIndex].querySelector('video');
-                    if (currentVideo) {
-                        currentVideo.pause();
-                    }
+                    // Pause current videos
+                    const currentVideos = slides[currentSlideIndex].querySelectorAll('video');
+                    currentVideos.forEach(video => {
+                        video.pause();
+                    });
                     
                     // Update current slide
                     slides[currentSlideIndex].classList.remove('current-slide');
@@ -683,14 +808,14 @@
                     
                     currentSlideIndex = targetIndex;
                     
-                    // Autoplay new video
-                    const newVideo = slides[targetIndex].querySelector('video');
-                    if (newVideo) {
-                        newVideo.play().catch(e => {
+                    // Autoplay new videos
+                    const newVideos = slides[targetIndex].querySelectorAll('video');
+                    newVideos.forEach(video => {
+                        video.play().catch(e => {
                             // Handle autoplay policy restrictions
                             console.log('Autoplay was prevented:', e);
                         });
-                    }
+                    });
                 };
                 
                 // Next button functionality
@@ -714,30 +839,30 @@
                 
                 // Pause other videos when one starts playing
                 slides.forEach((slide, index) => {
-                    const video = slide.querySelector('video');
-                    if (video) {
+                    const videos = slide.querySelectorAll('video');
+                    videos.forEach(video => {
                         video.addEventListener('play', () => {
                             // Pause all other videos in this carousel
                             slides.forEach((otherSlide, otherIndex) => {
                                 if (otherIndex !== index) {
-                                    const otherVideo = otherSlide.querySelector('video');
-                                    if (otherVideo) {
+                                    const otherVideos = otherSlide.querySelectorAll('video');
+                                    otherVideos.forEach(otherVideo => {
                                         otherVideo.pause();
-                                    }
+                                    });
                                 }
                             });
                         });
-                    }
+                    });
                 });
                 
-                // Autoplay the first video when page loads
-                const firstVideo = slides[0].querySelector('video');
-                if (firstVideo) {
-                    firstVideo.play().catch(e => {
+                // Autoplay the first videos when page loads
+                const firstVideos = slides[0].querySelectorAll('video');
+                firstVideos.forEach(video => {
+                    video.play().catch(e => {
                         // Handle autoplay policy restrictions
                         console.log('Autoplay was prevented:', e);
                     });
-                }
+                });
             };
 
             // Initialize all carousels on the page

@@ -130,6 +130,7 @@
             text-align: center;
         }
     </style>
+    <link rel="icon" type="image/webp" href="data/favicon.webp" />
 </head>
 
 <body>
@@ -194,7 +195,7 @@
         <!-- TODO: Update arxiv/code/data link -->
         <div class="base-row add-top-padding">
             <!-- Paper -->
-            <a href="data/EyeRobot-3.pdf" target="_blank" class="link-block">
+            <a href="data/EyeRobot-final.pdf" target="_blank" class="link-block">
                 <figure>
                     <img src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png"
                         alt="paper"
@@ -259,32 +260,32 @@
                     <div class="carousel-track-container">
                         <div class="carousel-track" id="task-carousel">
                             <div class="carousel-slide current-slide">
-                                <video loop muted playsinline style="width: 100%;">
-                                    <source src="data/estop/estop_continuous_servoing.mp4" type="video/mp4">
+                                <video loop muted playsinline style="width: 100%;" preload="none">
+                                    <source data-src="data/estop/estop_continuous_servoing.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop muted playsinline style="width: 100%;">
-                                    <source src="data/eraser/eraser_marker_stand_comp.mp4" type="video/mp4">
+                                <video loop muted playsinline style="width: 100%;" preload="none">
+                                    <source data-src="data/eraser/eraser_marker_stand_comp.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop muted playsinline style="width: 100%;">
-                                    <source src="data/towel_and_bucket/towel_bucket_perturbation.mp4" type="video/mp4">
+                                <video loop muted playsinline style="width: 100%;" preload="none">
+                                    <source data-src="data/towel_and_bucket/towel_bucket_perturbation.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop muted playsinline style="width: 100%;">
-                                    <source src="data/screwdriver_reorient/screwdriver_wood_supp.mp4" type="video/mp4">
+                                <video loop muted playsinline style="width: 100%;" preload="none">
+                                    <source data-src="data/screwdriver_reorient/screwdriver_wood_supp.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="carousel-slide">
-                                <video loop muted playsinline style="width: 100%;">
-                                    <source src="data/brush/brush_handoff.mp4" type="video/mp4">
+                                <video loop muted playsinline style="width: 100%;" preload="none">
+                                    <source data-src="data/brush/brush_handoff.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -310,8 +311,8 @@
                 <div class="carousel-track-container">
                     <div class="carousel-track" id="eyeball-carousel">
                         <div class="carousel-slide current-slide">
-                            <video loop muted playsinline style="width: 100%;">
-                                <source src="data/foveal_eye_view_website_videos/estop_eye_view_comp.mp4" type="video/mp4">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
+                                <source data-src="data/foveal_eye_view_website_videos/estop_eye_view_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -322,8 +323,8 @@
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%;">
-                                <source src="data/foveal_eye_view_website_videos/towel_eyeview_comp.mp4" type="video/mp4">
+                            <video loop muted playsinline style="width: 100%;" preload="none">
+                                <source data-src="data/foveal_eye_view_website_videos/towel_eyeview_comp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -342,62 +343,25 @@
                 </div>
             </div>
         </div>
-        <div class="section base-row add-top-padding">
-            <h1>Wrist and Exo Baselines</h1>
-        </div>
-        <div class="section base-row add-top-padding" style="flex-direction: column; align-items: center;">
-            <div class="carousel-container">
-                <div class="carousel-track-container">
-                    <div class="carousel-track" id="baselines-carousel">
-                        <div class="carousel-slide current-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/baselines/exo_only.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/baselines/wrist_only_good.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/eraser/eraser_single_perturbation.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-button carousel-button--left" data-carousel="baselines-carousel">
-                    <i class="ti ti-chevron-left"></i>
-                </button>
-                <button class="carousel-button carousel-button--right" data-carousel="baselines-carousel">
-                    <i class="ti ti-chevron-right"></i>
-                </button>
-                <div class="carousel-nav">
-                    <button class="carousel-indicator current-slide" data-slide="0"></button>
-                    <button class="carousel-indicator" data-slide="1"></button>
-                    <button class="carousel-indicator" data-slide="2"></button>
-                </div>
-            </div>
-        </div>
 
          </div>
          <div class="section base-row add-top-padding">
             <h1>How it works</h1>
             <div class="separator"></div>
             <p class="tldr"><b>Eyeball Hardware</b></p>
-            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
-                <div>
-                    <video loop autoplay muted playsinline style="width: 100%; max-width: 400px; height: 448px; object-fit: cover;">
-                        <source src="data/physical_eyeball/eyeball_sacaade_sdr.mp4" type="video/mp4">
+            <p class="paragraph">We design a performant camera gimbal which consists of two direct drive motors, which can move very quickly, precisely, and smoothly.
+                We use a 90fps global shutter camera, enabling smooth vision despite fast motion.
+            </p>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; width: 80%; margin-top: 20px;">
+                <div style="text-align: center; width: 49%;">
+                    <video loop autoplay muted playsinline style="width: 100%; height: auto; object-fit: cover;" preload="none">
+                        <source data-src="data/physical_eyeball/eyeball_sacaade_sdr.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div>
-                    <video loop autoplay muted playsinline style="width: 100%; max-width: 400px; height: 448px; object-fit: cover;">
-                        <source src="data/physical_eyeball/eyeball_smooth_pursuit_sdr.mp4" type="video/mp4">
+                <div style="text-align: center; width: 49%;">
+                    <video loop autoplay muted playsinline style="width: 100%; height: auto; object-fit: cover;" preload="none">
+                        <source data-src="data/physical_eyeball/eyeball_smooth_pursuit_sdr.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -454,12 +418,13 @@
                 </div>
             </div> -->
             <div class="separator"></div>
-            <p class="tldr"><b>Real2Sim EyeGym</b></p>
+            <p class="tldr"><b>Real-to-Sim EyeGym</b></p>
             <p class="paragraph">
                 We capture robot demonstrations with a 360° camera and import this into an RL environment for simulating eye views. 
+                EyeGym <em>only</em> simulates eye view, keeping the trajectory of the arm fixed.
             </p>
-            <video loop autoplay muted playsinline style="width: 100%;">
-                <source src="data/teleop/real2simclip.mp4" type="video/mp4">
+            <video loop autoplay muted playsinline style="width: 100%;" preload="none">
+                <source data-src="data/teleop/real2simclip.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
          
@@ -470,40 +435,58 @@
                 The eyeball is rewarded when the robot arm predicts accurate actions, leading to gaze behavior that facilitates action.
             </p>
             <img src="data/bcrl-abstract.jpg" style="width: 70%; display: block; margin: 20px auto;" alt="BC-RL Cotraining Abstract" />
-            <div class="video-container" style="display: flex; justify-content: space-between;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="text-align: center; width: 45%;">
-                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">Before BC-RL: random gaze</h3>
-                        <video loop autoplay muted playsinline style="width: 100%;">
-                            <source src="data/bcrl_training/before_training.mp4" type="video/mp4">
+            <div class="video-container" style="display: flex; justify-content: center; align-items: center; width: 70%; margin: 20px auto;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <div style="text-align: center; width: 49%;">
+                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">Before BC-RL</h3>
+                        <video loop autoplay muted playsinline style="width: 100%; height: auto; object-fit: cover;" preload="none">
+                            <source data-src="data/bcrl_training/before_training.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div style="text-align: center; width: 45%;">
-                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">After Training: searches for relevant objects</h3>
-                        <video loop autoplay muted playsinline style="width: 100%;">
-                            <source src="data/bcrl_training/after_training.mp4" type="video/mp4">
+                    <div style="text-align: center; width: 49%;">
+                        <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">After Training</h3>
+                        <video loop autoplay muted playsinline style="width: 100%; height: auto; object-fit: cover;" preload="none">
+                            <source data-src="data/bcrl_training/after_training.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
             </div>
-            <h2>Gaze Switching</h2>
-            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
-                <div>
-                    <video loop autoplay muted playsinline style="width: 100%; max-width: 400px; height: 225px; object-fit: cover;">
-                        <source src="data/foveal_eye_view_website_videos/gaze_switching_eye_view_comp.mp4" type="video/mp4">
+            <p class="tldr"><b>Gaze Switching in Real</b></p>
+            <p class="paragraph" style="text-align: center;">This task-driven gaze learned in sim transfers to real; 
+                the eye shifts from towel to bucket depending on the state of the arm. 
+                In these videos the arm is free-driven while the eye policy is executing autonomously.</p>
+            <div class="gaze-switching-container" style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
+                <div class="gaze-video">
+                    <video loop autoplay muted playsinline style="width: 100%; max-width: 400px; aspect-ratio: 16/9; object-fit: cover;" preload="none">
+                        <source data-src="data/foveal_eye_view_website_videos/gaze_switching_eye_view_comp.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div>
-                    <video loop autoplay muted playsinline style="width: 100%; max-width: 400px; height: 225px; object-fit: cover;">
-                        <source src="data/gaze_switching/gaze_switching_freedrive.mp4" type="video/mp4">
+                <div class="gaze-video">
+                    <video loop autoplay muted playsinline style="width: 100%; max-width: 400px; aspect-ratio: 16/9; object-fit: cover;" preload="none">
+                        <source data-src="data/gaze_switching/gaze_switching_freedrive.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
-            <p class="paragraph" style="text-align: center; margin-top: 15px;">The eye learns to shift its gaze from towel to bucket during grasping depending on the state of the arm.</p>
+            <style>
+                @media screen and (max-width: 768px) {
+                    .gaze-switching-container {
+                        flex-direction: column !important;
+                        align-items: center !important;
+                    }
+                    .gaze-video {
+                        width: 100%;
+                    }
+                    .gaze-video video {
+                        width: 100% !important;
+                        max-width: none !important;
+                        aspect-ratio: 16/9;
+                    }
+                }
+            </style>
          </div>
 
         <div class="section base-row add-top-padding">
@@ -528,8 +511,8 @@
                             <div style="display: flex; justify-content: space-between; gap: 20px;">
                                 <div style="width: 48%; text-align: center;">
                                     <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Uniform Resolution</h3>
-                                    <video loop muted playsinline style="width: 100%;">
-                                        <source src="data/estop/estop_uniform_distractor1.mp4" type="video/mp4">
+                                    <video loop muted playsinline style="width: 100%;" preload="none">
+                                        <source data-src="data/estop/estop_uniform_distractor1.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -547,8 +530,8 @@
                             <div style="display: flex; justify-content: space-between; gap: 20px;">
                                 <div style="width: 48%; text-align: center;">
                                     <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">Uniform Resolution</h3>
-                                    <video loop muted playsinline style="width: 100%;">
-                                        <source src="data/estop/estop_uniform_distractor2.mp4" type="video/mp4">
+                                    <video loop muted playsinline style="width: 100%;" preload="none">
+                                        <source data-src="data/estop/estop_uniform_distractor2.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -584,15 +567,15 @@
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <div style="text-align: center; width: 47%;">
                         <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">Uniform Resolution</h3>
-                        <video loop autoplay muted playsinline style="width: 100%;">
-                            <source src="data/boris/boris_uniform_resolution.mp4" type="video/mp4">
+                        <video loop autoplay muted playsinline style="width: 100%;" preload="none">
+                            <source data-src="data/boris/boris_uniform_resolution.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div style="text-align: center; width: 47%;">
                         <h3 style="font-size: 1.3em; margin-bottom: 0.5em;">With Foveation</h3>
-                        <video loop autoplay muted playsinline style="width: 100%;">
-                            <source src="data/boris/boris_foveal_input.mp4" type="video/mp4">
+                        <video loop autoplay muted playsinline style="width: 100%;" preload="none">
+                            <source data-src="data/boris/boris_foveal_input.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -601,39 +584,79 @@
 
         </div>
         
-    
+        <div class="section base-row add-top-padding">
+            <h1>Wrist and Exo Baselines</h1>
+        </div>
+        <div class="section base-row add-top-padding" style="flex-direction: column; align-items: center;">
+            <div class="carousel-container">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="baselines-carousel">
+                        <div class="carousel-slide current-slide">
+                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                                <source data-src="data/baselines/exo_only.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                                <source data-src="data/baselines/wrist_only_good.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                                <source data-src="data/eraser/eraser_single_perturbation.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button carousel-button--left" data-carousel="baselines-carousel">
+                    <i class="ti ti-chevron-left"></i>
+                </button>
+                <button class="carousel-button carousel-button--right" data-carousel="baselines-carousel">
+                    <i class="ti ti-chevron-right"></i>
+                </button>
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide" data-slide="0"></button>
+                    <button class="carousel-indicator" data-slide="1"></button>
+                    <button class="carousel-indicator" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+
         <div class="section base-row add-top-padding">
             <h1>Limitations and Failures</h1>
             <div class="carousel-container">
                 <div class="carousel-track-container">
                     <div class="carousel-track" id="limitations-carousel">
                         <div class="carousel-slide current-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/towel_and_bucket/towel_blind_grasp.mp4" type="video/mp4">
+                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                                <source data-src="data/towel_and_bucket/towel_blind_grasp.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/towel_and_bucket/towel_grasp_failure.mp4" type="video/mp4">
+                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                                <source data-src="data/towel_and_bucket/towel_grasp_failure.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/eraser/eraser_place_failure.mp4" type="video/mp4">
+                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                                <source data-src="data/eraser/eraser_place_failure.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/brush/brush_grasp_failure.mp4" type="video/mp4">
+                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                                <source data-src="data/brush/brush_grasp_failure.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-slide">
-                            <video loop muted playsinline style="width: 100%; max-width: 600px;">
-                                <source src="data/active_visual_pretraining/avp_towel_failure.mp4" type="video/mp4">
+                            <video loop muted playsinline style="width: 100%; max-width: 600px;" preload="none">
+                                <source data-src="data/active_visual_pretraining/avp_towel_failure.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -653,25 +676,6 @@
                     <button class="carousel-indicator" data-slide="4"></button>
                 </div>
             </div>
-        </div>
-            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; width: 100%; margin-top: 20px;">
-                <div>
-                    <video loop autoplay muted playsinline style="width: 100%; max-width: 400px; height: 448px; object-fit: cover;">
-                        <source src="data/boris/boris_peakaboo_crashout.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div>
-                    <video loop autoplay muted playsinline style="width: 100%; max-width: 400px; height: 448px; object-fit: cover;">
-                        <source src="data/boris/boris_peakaboo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-            <p class="paragraph" style="font-size: 1.2em; text-align: center; margin-top: 15px;">
-                Context, memory, todo
-            </p>
-        </div>
 
 
         <div class="section citation" style="margin-top: 50px">
@@ -702,64 +706,94 @@
             
             const initializeCarousel = (carouselContainer) => {
                 const track = carouselContainer.querySelector('.carousel-track');
+                if (!track) return;
+
                 const slides = Array.from(track.children);
                 const nextButton = carouselContainer.querySelector('.carousel-button--right');
                 const prevButton = carouselContainer.querySelector('.carousel-button--left');
                 const dotsNav = carouselContainer.querySelector('.carousel-nav');
-                const dots = Array.from(dotsNav.children);
+                const dots = dotsNav ? Array.from(dotsNav.children) : [];
                 
                 let currentSlideIndex = 0;
+
+                const loadVideo = (video) => {
+                    const sources = video.querySelectorAll('source[data-src]');
+                    if (sources.length > 0) {
+                        sources.forEach(source => {
+                            source.src = source.dataset.src;
+                            source.removeAttribute('data-src');
+                        });
+                        video.load();
+                    }
+                };
                 
                 // Function to move to a specific slide
                 const moveToSlide = (targetIndex) => {
+                    if (targetIndex < 0 || targetIndex >= slides.length) return;
+
                     // Pause current videos
-                    const currentVideos = slides[currentSlideIndex].querySelectorAll('video');
-                    currentVideos.forEach(video => {
-                        video.pause();
+                    if (slides[currentSlideIndex]) {
+                        const currentVideos = slides[currentSlideIndex].querySelectorAll('video');
+                        currentVideos.forEach(video => {
+                            video.pause();
+                        });
+                    }
+                    
+                    const targetSlide = slides[targetIndex];
+
+                    // Load video for target slide
+                    const newVideos = targetSlide.querySelectorAll('video');
+                    newVideos.forEach(video => {
+                        loadVideo(video);
+                        video.play().catch(e => {
+                            // Autoplay was prevented.
+                            console.log('Autoplay was prevented:', e);
+                        });
                     });
                     
                     // Update current slide
-                    slides[currentSlideIndex].classList.remove('current-slide');
-                    slides[targetIndex].classList.add('current-slide');
+                    if (slides[currentSlideIndex]) {
+                        slides[currentSlideIndex].classList.remove('current-slide');
+                    }
+                    targetSlide.classList.add('current-slide');
                     
                     // Update dots
-                    dots[currentSlideIndex].classList.remove('current-slide');
-                    dots[targetIndex].classList.add('current-slide');
+                    if (dots.length > 0 && dots[currentSlideIndex]) {
+                        dots[currentSlideIndex].classList.remove('current-slide');
+                        dots[targetIndex].classList.add('current-slide');
+                    }
                     
                     // Move the track
                     const slideWidth = slides[0].getBoundingClientRect().width;
                     track.style.transform = `translateX(-${slideWidth * targetIndex}px)`;
                     
                     currentSlideIndex = targetIndex;
-                    
-                    // Autoplay new videos
-                    const newVideos = slides[targetIndex].querySelectorAll('video');
-                    newVideos.forEach(video => {
-                        video.play().catch(e => {
-                            // Handle autoplay policy restrictions
-                            console.log('Autoplay was prevented:', e);
-                        });
-                    });
                 };
                 
                 // Next button functionality
-                nextButton.addEventListener('click', () => {
-                    const nextIndex = currentSlideIndex === slides.length - 1 ? 0 : currentSlideIndex + 1;
-                    moveToSlide(nextIndex);
-                });
+                if (nextButton) {
+                    nextButton.addEventListener('click', () => {
+                        const nextIndex = (currentSlideIndex + 1) % slides.length;
+                        moveToSlide(nextIndex);
+                    });
+                }
                 
                 // Previous button functionality
-                prevButton.addEventListener('click', () => {
-                    const prevIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
-                    moveToSlide(prevIndex);
-                });
+                if (prevButton) {
+                    prevButton.addEventListener('click', () => {
+                        const prevIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+                        moveToSlide(prevIndex);
+                    });
+                }
                 
                 // Dot navigation functionality
-                dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => {
-                        moveToSlide(index);
+                if (dots.length > 0) {
+                    dots.forEach((dot, index) => {
+                        dot.addEventListener('click', () => {
+                            moveToSlide(index);
+                        });
                     });
-                });
+                }
                 
                 // Pause other videos when one starts playing
                 slides.forEach((slide, index) => {
@@ -779,20 +813,52 @@
                     });
                 });
                 
-                // Autoplay the first videos when page loads
-                const firstVideos = slides[0].querySelectorAll('video');
-                firstVideos.forEach(video => {
-                    video.play().catch(e => {
-                        // Handle autoplay policy restrictions
-                        console.log('Autoplay was prevented:', e);
+                // Autoplay the first video when page loads
+                if (slides.length > 0 && slides[0]) {
+                    const firstVideos = slides[0].querySelectorAll('video');
+                    firstVideos.forEach(video => {
+                        loadVideo(video);
+                        video.play().catch(e => {
+                            // Handle autoplay policy restrictions
+                            console.log('Autoplay was prevented:', e);
+                        });
                     });
-                });
+                }
             };
 
             // Initialize all carousels on the page
             const carousels = document.querySelectorAll('.carousel-container');
             carousels.forEach(initializeCarousel);
+
+            // Lazy load videos that are not in a carousel
+            const lazyVideos = [].slice.call(document.querySelectorAll('video:not(.carousel-track video)'));
+
+            if ('IntersectionObserver' in window) {
+                let lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(videoEntry) {
+                    if (videoEntry.isIntersecting) {
+                    let video = videoEntry.target;
+                    let sources = video.querySelectorAll('source[data-src]');
+                    sources.forEach(source => {
+                        if (source.dataset.src) {
+                        source.src = source.dataset.src;
+                        source.removeAttribute('data-src');
+                        }
+                    });
+                    video.load();
+                    video.play().catch(e => console.log("Autoplay for non-carousel video prevented.", e));
+                    lazyVideoObserver.unobserve(video);
+                    }
+                });
+                });
+
+                lazyVideos.forEach(function(video) {
+                lazyVideoObserver.observe(video);
+                });
+            }
         });
     </script>
 
 </body>
+
+</html>
